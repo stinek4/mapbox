@@ -1,0 +1,157 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    color: white;
+    
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+#map-container{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    z-index: -10000;
+}
+
+#map{
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: -100;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+#content{
+    margin: auto;
+    position: absolute;
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.slides{
+    position: absolute;
+    padding: 30px;  
+    left: 0px;
+    top: 15px;
+    width: 500px;
+    height: 100px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: 1;
+    line-height: 20px;
+}
+
+
+.slides .active-slide{
+    opacity: 1;
+    z-index: 2;
+}
+
+.slide{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 200px;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.active-slide{
+    opacity: 1;
+    z-index: 2;
+}
+
+.buttons{
+    position: absolute;
+    top: 10px;
+    z-index: 300;
+}
+
+#next{
+    top: 200px;
+    left: 400px;
+    cursor: pointer;
+}
+
+#previous{
+    top: 200px;
+    left: 300px;
+    cursor: pointer;
+}
+
+#submit{
+    top: 170px;
+    left: 600px;
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: rgb(34, 153, 48);
+    color: #fff;
+    border: 0px;
+    border-radius: 3px;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#submit:hover{
+    background-color: rgb(49, 165, 16);
+}
+
+#results{
+    position: absolute;
+    top: 200px;
+    left: 450px;
+}
+
+.question{
+    font-weight: 600;
+}
+
+.answers{
+    margin-bottom: 20px;
+}
+
+.answers label{
+    display: block;
+}
+
+
+.quiz-container{
+    position: absolute;
+    display: grid;
+    grid-auto-flow: column; 
+    
+    top: 45px;
+    left: 20px;
+    height: 250px;
+    width: 700px;
+    background-color: rgba(24, 24, 24, 0.8);
+    margin-top: 400px;
+}
+
+.quiz-container h1{
+    font-family: 'Bangers', Arial, Helvetica, sans-serif;
+    position: absolute;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    padding-left: 30px;
+    letter-spacing: 8px;
+}
+
+#quiz{
+    position: absolute;
+    top: 45px;
+}
+
